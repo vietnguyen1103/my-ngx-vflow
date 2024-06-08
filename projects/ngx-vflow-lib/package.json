@@ -1,6 +1,6 @@
 {
-  "name": "ngx-vflow",
-  "version": "0.4.0",
+  "name": "my-ngx-vflow",
+  "version": "2.0.0",
   "license": "MIT",
   "homepage": "https://www.ngx-vflow.org/",
   "author": "VietNT",
@@ -12,7 +12,7 @@
     "workflow"
   ],
   "repository": {
-    "url": "https://github.com/vietnguyen1103/ngx-vflow-custom",
+    "url": "https://github.com/vietnguyen1103/my-ngx-vflow",
     "type": "git"
   },
   "scripts": {
@@ -21,8 +21,8 @@
     "publish:patch": "npm version patch && ng build ngx-vflow-lib && cd ../../dist/ngx-vflow-lib && npm publish"
   },
   "peerDependencies": {
-    "@angular/common": "^16.2.0 || 17.x || 18.x",
-    "@angular/core": "^16.2.0 || 17.x || 18.x",
+    "@angular/common": "^15.2.0 || 16.x || 17.x || 18.x",
+    "@angular/core": "^15.2.0 || 16.x || 17.x || 18.x",
     "d3-drag": "^3.0.0",
     "d3-path": "^3.1.0",
     "d3-selection": "^3.0.0",
