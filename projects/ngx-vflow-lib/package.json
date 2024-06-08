@@ -3,7 +3,7 @@
   "version": "0.4.0",
   "license": "MIT",
   "homepage": "https://www.ngx-vflow.org/",
-  "author": "Artem Mangilev",
+  "author": "VietNT",
   "keywords": [
     "angular",
     "node-based UI",
@@ -12,7 +12,7 @@
     "workflow"
   ],
   "repository": {
-    "url": "https://github.com/artem-mangilev/ngx-vflow",
+    "url": "https://github.com/vietnguyen1103/ngx-vflow-custom",
     "type": "git"
   },
   "scripts": {
