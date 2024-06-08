@@ -41,7 +41,7 @@ export class EdgeChangesService {
     distinctUntilChanged(haveSameContents),
     filter(edges => !!edges.length),
     map((edges) =>
-      edges.map(({ edge }) => ({ type: 'detached', id: edge.id }))
+      edges.map(({ edge }: { edge: any }) => ({ type: 'detached', id: edge.id }))
     )
   ) satisfies Observable<EdgeChange[]>
 
@@ -53,7 +53,7 @@ export class EdgeChangesService {
       }),
       filter(edges => !!edges.length),
       map((edges) =>
-        edges.map(({ edge }) => ({ type: 'add', id: edge.id }))
+        edges.map(({ edge }: { edge: any }) => ({ type: 'add', id: edge.id }))
       )
     ) satisfies Observable<EdgeChange[]>
 
@@ -65,7 +65,7 @@ export class EdgeChangesService {
       }),
       filter(edges => !!edges.length),
       map((edges) =>
-        edges.map(({ edge }) => ({ type: 'remove', id: edge.id }))
+        edges.map(({ edge }: { edge: any }) => ({ type: 'remove', id: edge.id }))
       )
     ) satisfies Observable<EdgeChange[]>
 
@@ -73,7 +73,7 @@ export class EdgeChangesService {
     .pipe(
       switchMap((edges) =>
         merge(
-          ...edges.map(edge =>
+          ...edges.map((edge: any) =>
             edge.selected$.pipe(
               distinctUntilChanged(),
               skip(1),
@@ -82,7 +82,7 @@ export class EdgeChangesService {
           )
         )
       ),
-      map((changedEdge) => [
+      map((changedEdge: any) => [
         { type: 'select', id: changedEdge.edge.id, selected: changedEdge.selected() }
       ])
     ) satisfies Observable<EdgeChange[]>
